@@ -12,7 +12,7 @@ export const goToAuth = () => Navigation.setRoot({
               bottomTab: {
                 fontSize: 12,
                 text: 'Sign In',
-               // icon: require('./signin.png')
+               icon: require('../../assets/signin.png')
               }
             }
           },
@@ -24,7 +24,7 @@ export const goToAuth = () => Navigation.setRoot({
               bottomTab: {
                 text: 'Sign Up',
                 fontSize: 12,
-               // icon: require('./signup.png')
+                icon: require('../../assets/signup.png')
               }
             }
           },
@@ -41,7 +41,7 @@ export const goHome = () => Navigation.setRoot({
       children: [
         {
           component: {
-            name: 'Menu',
+            name: 'Home',
           }
         }
     ],

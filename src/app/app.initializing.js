@@ -6,14 +6,12 @@ import {
   AsyncStorage
 } from 'react-native'
 
-import { goToAuth, goHome } from './navigation'
-
-import { USER_KEY } from './config'
+import { goToAuth, goHome } from './navigation/navigation'
 
 export default class Initialising extends React.Component {
   async componentDidMount() {
     try {
-      const user = await AsyncStorage.getItem(USER_KEY)
+      const user = 'await AsyncStorage.getItem(USER_KEY)'
       console.log('user: ', user)
       if (user) {
         goHome()

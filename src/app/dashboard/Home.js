@@ -6,10 +6,10 @@ import {
   StyleSheet,
   AsyncStorage
 } from 'react-native'
-import { goToAuth } from './navigation'
+import { goToAuth } from '../navigation/navigation'
 import {Navigation} from 'react-native-navigation';
 
-import { USER_KEY } from './config'
+import { USER_KEY } from '../app.config'
 
 export default class Home extends React.Component {
   static get options() {
@@ -23,7 +23,7 @@ export default class Home extends React.Component {
   }
   logout = async () => {
     try {
-      await AsyncStorage.removeItem(USER_KEY)
+     // await AsyncStorage.removeItem(USER_KEY)
       goToAuth()
     } catch (err) {
       console.log('error signing out...: ', err)
