@@ -6,4 +6,6 @@ export function registerScreens() {
   Navigation.registerComponent('SignIn', () => require('./userAuthentication/SignIn').default);
   Navigation.registerComponent('SignUp', () => require('./userAuthentication/SignUp').default);
   Navigation.registerComponent('Screen2', () => require('./dashboard/Screen2').default);
+  Navigation.registerComponent('Menu', () => require('./menu/menu').default);
+  Navigation.registerComponent('About', () => require('./menu/aboutus').default);
 }
