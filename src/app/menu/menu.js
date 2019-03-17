@@ -5,54 +5,72 @@ import {
   TouchableOpacity,
   StyleSheet,
 } from 'react-native';
+import {Navigation} from 'react-native-navigation';
+import { goToAuth } from '../navigation/navigation';
 
 export default class MenuScreen extends Component {
 
   render() {
     return (
       <View>
-        <TouchableOpacity style={styles.menu} onPress={this.onCalendarsPress.bind(this)}>
-          <Text style={styles.menuText}>About</Text>
+        <TouchableOpacity style={styles.menu} onPress={this.onMyAchievementsPress.bind(this)}>
+          <Text style={styles.menuText}>My Achievements</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.menu} onPress={this.onCalendarListPress.bind(this)}>
-          <Text style={styles.menuText}>Calendar List</Text>
+        <TouchableOpacity style={styles.menu} onPress={this.onProfilePress.bind(this)}>
+          <Text style={styles.menuText}>Profile</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.menu} onPress={this.onHorizontalCalendarListPress.bind(this)}>
-          <Text style={styles.menuText}>Horizontal Calendar List</Text>
+        <TouchableOpacity style={styles.menu} onPress={this.onAboutUsPress.bind(this)}>
+          <Text style={styles.menuText}>About us</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.menu} onPress={this.onAgendaPress.bind(this)}>
-          <Text style={styles.menuText}>Agenda</Text>
+        <TouchableOpacity style={styles.menu} onPress={this.onSupportPress.bind(this)}>
+          <Text style={styles.menuText}>Support</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.menu} onPress={this.onLogOutPress.bind(this)}>
+          <Text style={styles.menuText}>Log out</Text>
         </TouchableOpacity>
       </View>
     );
   }
 
-  onCalendarsPress() {
-    this.props.navigator.push({
-      screen: 'About',
-      title: 'About'
+  onMyAchievementsPress() {
+    Navigation.push(this.props.componentId, {
+      component: {
+        name: 'MyAchievements',
+      }
     });
   }
 
-  onCalendarListPress() {
-    this.props.navigator.push({
-      screen: 'CalendarsList',
-      title: 'Calendar List'
+  onProfilePress() {
+    Navigation.push(this.props.componentId, {
+      component: {
+        name: 'Profile',
+      }
     });
   }
 
-  onHorizontalCalendarListPress() {
-    this.props.navigator.push({
-      screen: 'HorizontalCalendarList',
-      title: 'Horizontal Calendars List'
+  onAboutUsPress() {
+    Navigation.push(this.props.componentId, {
+      component: {
+        name: 'AboutUs',
+      }
     });
   }
 
-  onAgendaPress() {
-    this.props.navigator.push({
-      screen: 'Agenda',
-      title: 'Agenda'
+  onSupportPress() {
+    Navigation.push(this.props.componentId, {
+      component: {
+        name: 'Support',
+      }
     });
+  }
+
+  onLogOutPress() {
+    try {
+      // await AsyncStorage.removeItem(USER_KEY)
+       goToAuth()
+     } catch (err) {
+       console.log('error signing out...: ', err)
+     }
   }
 }
 

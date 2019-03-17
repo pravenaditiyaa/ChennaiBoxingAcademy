@@ -57,7 +57,7 @@ export const goHome = () => Navigation.setRoot({
               options: {
                 topBar: {
                   title: {
-                    text: 'TAB 1'
+                    text: 'Home'
                   },
                   leftButtons: [
                     {
@@ -81,7 +81,7 @@ export const goHome = () => Navigation.setRoot({
             bottomTab: {
               icon: require('../../assets/icons/ic_tab_home.png'),
               testID: 'FIRST_TAB_BAR_BUTTON',
-              text: 'Tab1',
+              text: 'Home',
             }
           }
         }
@@ -94,7 +94,7 @@ export const goHome = () => Navigation.setRoot({
               options: {
                 topBar: {
                   title: {
-                    text: 'TAB 2'
+                    text: 'Schedule'
                   },
                   leftButtons: [
                     {
@@ -116,9 +116,9 @@ export const goHome = () => Navigation.setRoot({
           }],
           options: {
             bottomTab: {
-              icon: require('../../assets/icons/ic_tab_menu.png'),
+              icon: require('../../assets/icons/ic_nav_calendar.png'),
               testID: 'SECOND_TAB_BAR_BUTTON',
-              text: 'Tab2',
+              text: 'Schedule',
             }
           }
         }
@@ -152,7 +152,7 @@ export const goHome = () => Navigation.setRoot({
           }],
           options: {
             bottomTab: {
-              icon: require('../../assets/icons/ic_tab_home.png'),
+              icon: require('../../assets/icons/ic_nav_creative.png'),
               testID: 'FIRST_TAB_BAR_BUTTON',
               text: 'Tab1',
             }
@@ -166,7 +166,7 @@ export const goHome = () => Navigation.setRoot({
               options: {
                 topBar: {
                   title: {
-                    text: 'TAB 1'
+                    text: 'Menu'
                   },
                   leftButtons: [
                     {
@@ -190,7 +190,7 @@ export const goHome = () => Navigation.setRoot({
             bottomTab: {
               icon: require('../../assets/icons/ic_tab_menu.png'),
               testID: 'FIRST_TAB_BAR_BUTTON',
-              text: 'Tab1',
+              text: 'Menu',
             }
           }
         }
